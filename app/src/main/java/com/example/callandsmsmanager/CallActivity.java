@@ -50,12 +50,14 @@ public class CallActivity extends AppCompatActivity {
 
     private void makeDirectCall() {
         String num = phoneNumber.getText().toString().trim();
-        if (phoneNumber != null){
+        if (phoneNumber != null) {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.setData(Uri.parse("tel:" + num));
-            if (checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED){
-                startActivity(callIntent);
-            }else {
+            try {
+                if (checkSelfPermission(Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED) {
+                    startActivity(callIntent);
+                }
+            } catch (SecurityException e) {
                 requestPermissions(new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL_PHONE);
             }
         }

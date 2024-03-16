@@ -26,7 +26,7 @@
         android:layout_marginTop="50dp"
         android:autofillHints="phone"
         android:hint="@string/enter_sms_text"
-        android:inputType="phone"
+        android:inputType="textMultiLine"
         android:textColor="@color/black" />
 
     <Button
