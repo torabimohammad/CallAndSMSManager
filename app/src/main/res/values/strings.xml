@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Call and SMS Manager</string>
+    <string name="enter_phone_number">Enter phone number :</string>
+    <string name="compose">COMPOSE</string>
+    <string name="call">CALL</string>
+    <string name="direct_to_call">Make A Call</string>
+    <string name="direct_to_sms">Send SMS</string>
+    <string name="enter_sms_text">Text message</string>
+</resources>
