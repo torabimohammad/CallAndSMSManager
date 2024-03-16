@@ -1,8 +1,6 @@
 package com.example.callandsmsmanager;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SmsActivity extends AppCompatActivity {
-    private static final int PERMISSION_REQUEST_SEND_SMS = 1;
     Button btnSendSms;
     private EditText phoneNumber, textMessage;
 

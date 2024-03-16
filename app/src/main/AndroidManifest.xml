@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".SmsActivity"/>
         <activity android:name=".CallActivity"/>
+        <activity android:name=".InternationalCallActivity"/>
+        <activity android:name=".SelectPrefixActivity"/>
     </application>
 
 </manifest>

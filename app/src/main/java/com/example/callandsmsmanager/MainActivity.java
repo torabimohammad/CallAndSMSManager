@@ -5,14 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button smsActivity, callActivity;
+    Button smsActivity, callActivity,internationalCallActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         smsActivity = findViewById(R.id.direct_to_sms);
         callActivity = findViewById(R.id.direct_to_call);
+        internationalCallActivity = findViewById(R.id.direct_to_international_call);
 
         // Handle the call button to direct the app in Call activity layout
         callActivity.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SmsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // Handle the international call button to direct the app in international call activity layout
+        internationalCallActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SelectPrefixActivity.class);
                 startActivity(intent);
             }
         });

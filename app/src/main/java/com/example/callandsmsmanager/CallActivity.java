@@ -28,18 +28,18 @@ public class CallActivity extends AppCompatActivity {
         btnCall = findViewById(R.id.btn_make_call);
         btnCompose = findViewById(R.id.btn_compose_call);
         phoneNumber = findViewById(R.id.input_number_call);
-
+        // Set the onClick button to make a compose call
         btnCompose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String number = phoneNumber.getText().toString().trim();
-
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:" + number));
                 startActivity(intent);
             }
         });
 
+        // Set the onClick button to make a direct call
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

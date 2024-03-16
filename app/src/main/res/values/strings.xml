@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">Call and SMS Manager</string>
-    <string name="enter_phone_number">Enter phone number :</string>
+    <string name="enter_phone_number">Enter phone number</string>
     <string name="compose">COMPOSE</string>
     <string name="call">CALL</string>
     <string name="direct_to_call">Make A Call</string>
     <string name="direct_to_sms">Send SMS</string>
     <string name="enter_sms_text">Text message</string>
+    <string name="_39">+39</string>
+    <string name="_49">+49</string>
+    <string name="_33">+33</string>
+    <string name="_34">+34</string>
+    <string name="select_prefix">Select</string>
+    <string name="direct_to_international_call">International Call</string>
+    <string name="france">France</string>
+    <string name="geramny">Geramny</string>
+    <string name="spain">Spain</string>
+    <string name="italy">Italy</string>
 </resources>
