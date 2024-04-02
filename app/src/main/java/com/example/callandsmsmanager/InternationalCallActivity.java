@@ -14,8 +14,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class InternationalCallActivity extends AppCompatActivity {
     private static final int REQUEST_CALL_PHONE = 1;
-    Button composeInterCall, directInterCall, openPrefixBtn, openInternationalNumBtn ;
+    private static final int PREFIX_REQUEST_CODE = 1;
+    private static final int NUMBER_REQUEST_CODE = 2;
+
+    Button composeInterCall, directInterCall, openPrefixBtn, openInternationalNumBtn;
     EditText prefix, phoneNumber;
+    String selectedPrefix;
+    String selectedInternationalNumber;
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK){
+            if (requestCode == PREFIX_REQUEST_CODE) {
+            selectedPrefix = data.getStringExtra("selectedPrefix");
+            prefix.setText(selectedPrefix);
+        } else if (requestCode == NUMBER_REQUEST_CODE) {
+                selectedInternationalNumber = data.getStringExtra("selectedNumber");
+                phoneNumber.setText(selectedInternationalNumber);
+            }
+        }
+
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,7 +69,7 @@ public class InternationalCallActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(InternationalCallActivity.this, ChoosePrefixActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, PREFIX_REQUEST_CODE);
             }
         });
 
@@ -56,7 +77,7 @@ public class InternationalCallActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(InternationalCallActivity.this, ChooseInternationalNumberActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, NUMBER_REQUEST_CODE);
             }
         });
     }

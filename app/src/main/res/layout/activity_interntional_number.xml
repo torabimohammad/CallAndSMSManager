@@ -24,7 +24,7 @@
             android:orientation="horizontal">
 
             <RadioGroup
-                android:id="@+id/btn_radio_group"
+                android:id="@+id/btn_international_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -33,7 +33,7 @@
                 android:orientation="vertical">
 
                 <RadioButton
-                    android:id="@+id/it_prefix"
+                    android:id="@+id/police"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
@@ -42,20 +42,20 @@
                     android:visibility="visible" />
 
                 <RadioButton
-                    android:id="@+id/es_prefix"
+                    android:id="@+id/ambulance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="118" />
 
                 <RadioButton
-                    android:id="@+id/gr_prefix"
+                    android:id="@+id/child_abuse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="114"
                     android:textColorHint="#000" />
 
                 <RadioButton
-                    android:id="@+id/fr_prefix"
+                    android:id="@+id/fire"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="115" />
@@ -90,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="27dp"
-                android:text="Chile Abuse"
+                android:text="Child Abuse"
                 android:textColor="#868686"
                 android:textSize="17sp" />
 
@@ -107,7 +107,7 @@
 
 
     <Button
-        android:id="@+id/select_prefix"
+        android:id="@+id/select_number"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
