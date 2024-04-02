@@ -1,6 +1,7 @@
 package com.example.callandsmsmanager;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ChooseInternationalNumberActivity extends AppCompatActivity {
     RadioGroup internationalNumberRg;
-    Button interNumChooseBtn;
+    Button interNumChooseBtn, callInfoBtn;
     String selectedNumber;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class ChooseInternationalNumberActivity extends AppCompatActivity {
 
         internationalNumberRg = findViewById(R.id.btn_international_number);
         interNumChooseBtn = findViewById(R.id.select_number);
+        callInfoBtn = findViewById(R.id.show_number_info);
         interNumChooseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +38,15 @@ public class ChooseInternationalNumberActivity extends AppCompatActivity {
                 } else {
                     return;
                 }
+            }
+        });
+        callInfoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String prefixList ="https://en.wikipedia.org/wiki/List_of_emergency_telephone_numbers";
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(prefixList));
+                startActivity(intent);
             }
         });
     }
