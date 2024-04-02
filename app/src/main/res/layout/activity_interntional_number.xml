@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/international_call_select_prefix_layout"
+    android:id="@+id/choose_international_number_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InternationalCallActivity">
+    tools:context=".ChooseInternationalNumberActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="false"
-                    android:text="@string/_39"
+                    android:text="112"
                     android:textColorHint="@color/black"
                     android:visibility="visible" />
 
@@ -45,20 +45,20 @@
                     android:id="@+id/es_prefix"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_34" />
+                    android:text="118" />
 
                 <RadioButton
                     android:id="@+id/gr_prefix"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_49"
+                    android:text="114"
                     android:textColorHint="#000" />
 
                 <RadioButton
                     android:id="@+id/fr_prefix"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/_33" />
+                    android:text="115" />
             </RadioGroup>
 
         </LinearLayout>
@@ -74,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="@string/italy"
+                android:text="Police"
                 android:textColor="#868686"
                 android:textSize="17sp" />
 
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="23dp"
-                android:text="@string/spain"
+                android:text="Ambulance"
                 android:textColor="#868686"
                 android:textSize="17sp" />
 
@@ -90,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="27dp"
-                android:text="@string/geramny"
+                android:text="Chile Abuse"
                 android:textColor="#868686"
                 android:textSize="17sp" />
 
@@ -98,7 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:text="@string/france"
+                android:text="Fire"
                 android:textColor="#868686"
                 android:textSize="17sp" />
 

@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class InternationalCallActivity extends AppCompatActivity {
     private static final int REQUEST_CALL_PHONE = 1;
-    Button composeInterCall, directInterCall;
+    Button composeInterCall, directInterCall, openPrefixBtn, openInternationalNumBtn ;
     EditText prefix, phoneNumber;
 
     @Override
@@ -29,6 +29,8 @@ public class InternationalCallActivity extends AppCompatActivity {
         prefix.setText(selectedValue);
         composeInterCall = findViewById(R.id.btn_compose_inter_call);
         directInterCall = findViewById(R.id.btn_make_inter_call);
+        openPrefixBtn = findViewById(R.id.choose_prefix);
+        openInternationalNumBtn = findViewById(R.id.choose_international_number);
 
         composeInterCall.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,8 +44,22 @@ public class InternationalCallActivity extends AppCompatActivity {
                 directCall();
             }
         });
-    }
+        openPrefixBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InternationalCallActivity.this, ChoosePrefixActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        openInternationalNumBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InternationalCallActivity.this, ChooseInternationalNumberActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     private void directCall() {
         String prefixValue = prefix.getText().toString();

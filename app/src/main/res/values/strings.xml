@@ -16,4 +16,8 @@
     <string name="geramny">Geramny</string>
     <string name="spain">Spain</string>
     <string name="italy">Italy</string>
+    <string name="choose_prefix">Choose</string>
+    <string name="choose_international_number">Choose</string>
+    <string name="enter_prefix">Choose Prefix</string>
+    <string name="show_information">Info</string>
 </resources>
